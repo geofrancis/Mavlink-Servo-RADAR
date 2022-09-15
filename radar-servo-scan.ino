@@ -117,7 +117,7 @@ if(lidarAngle%res <=target)
 
 moveservo();
 send_pos();
-readsonar();
+readRADAR();
   
   }
 
@@ -131,7 +131,7 @@ sweeper1.Update();
 
 
   
-void readsonar(){
+void readRADAR(){
  
  
   while (Serial2.available()) {
@@ -146,7 +146,7 @@ void readsonar(){
                 int micro = buf[7];
                 int off = buf[8];
                 break;
-        Distanc = 0.1 * dist;
+        Dist = 0.1 * dist;
       }
     }
   }
